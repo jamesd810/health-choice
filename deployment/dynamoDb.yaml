@@ -1,0 +1,16 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Resources:
+  DiseasesTable:
+    Type: "AWS::DynamoDB::Table"
+    Properties:
+      TableName: "Diseases"
+      AttributeDefinitions:
+        - AttributeName: "id"
+          AttributeType: "S"
+      KeySchema:
+        - AttributeName: "id"
+          KeyType: "HASH"
+      BillingMode: "PAY_PER_REQUEST"
+      Tags:
+        - Key: "Project"
+          Value: "Chronic Disease Mitigation App"
